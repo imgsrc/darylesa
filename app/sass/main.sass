@@ -1,0 +1,83 @@
+@import ../../bourbon/bourbon
+@import fonts
+@import libs
+@import vars
+@import settings
+
+nav
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+    li
+      display: inline-block
+
+.mnu-line
+  padding-top: 48px
+
+.logo
+  display: block
+  width: 200px
+
+  img
+    width: 100%
+
+.s-wide
+  padding: 80px 0
+  h2
+    text-align: center
+    margin-top: 0
+    line-height: em(19px)
+
+.main-mnu
+  text-align: center
+  font-size: em(16px)
+  > ul
+    > li
+      > a
+        display: block
+        padding: 10px 18px
+        color: #7e91a4
+        &:hover
+          color: $blue
+          +mt(0.5s)
+      &.active
+        a
+          color: $blue
+          text-decoration: underline
+
+.phone
+  text-align: right
+  line-height: 1.4
+
+  &-wrap
+    color: $blue
+    font-family: "Exo2Bold", sans-serif
+    font-size: em(20px)
+    line-height: em(15px)
+    .fa
+      font-size: em(18px)
+      position: relative
+      top: 2px
+      margin-right: 5px
+
+  .callback
+    color: #7e91a4
+    display: inline-block
+    font-size: em(13px)
+    line-height: em(22px)
+    border-bottom: 1px dashed #7e91a4
+    +mt(0.5s)
+    &:hover
+      text-decoration: none
+      border-color: transparent
+
+
+
+
+
+
+
+//Always end
+@import media

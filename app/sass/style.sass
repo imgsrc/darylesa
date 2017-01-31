@@ -1,0 +1,711 @@
+@import ../../bourbon/bourbon
+@import fonts
+@import libs
+@import vars
+@import settings
+
+nav,
+.header-content
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+    li
+      display: inline-block
+
+.main-head
+  background: url(../img/bg_top.jpg) top center
+  background-size: cover
+  min-height: 100vh
+  overflow: hidden
+
+.mnu-line
+  padding-top: 48px
+
+.logo
+  display: block
+  width: 100px
+
+  img
+    width: 100%
+
+.s-wide
+  padding: 80px 0
+  h2
+    text-align: center
+    margin-top: 0
+    line-height: em(19px)
+
+.main-mnu
+  text-align: center
+  font-size: em(13px)
+
+  > ul
+    > li
+      > a
+        display: block
+        padding: 10px 18px
+        color: #7e91a4
+
+        &:hover
+          color: $blue
+
+          +mt(0.5s)
+
+      &.active
+        a
+          color: $blue
+          text-decoration: underline
+
+.phone
+  text-align: right
+  line-height: 1.4
+
+  &-wrap
+    color: $blue
+    font-family: "Exo2Bold", sans-serif
+    font-size: em(20px)
+    line-height: em(15px)
+
+    .fa
+      font-size: em(18px)
+      position: relative
+      top: 2px
+      margin-right: 5px
+
+  .callback
+    color: #7e91a4
+    display: inline-block
+    font-size: em(13px)
+    line-height: em(22px)
+    border-bottom: 1px dashed #7e91a4
+
+    +mt(0.5s)
+
+    &:hover
+      text-decoration: none
+      border-color: transparent
+
+.header-content
+  padding: 10% 0 5%
+
+  .button
+    margin-top: 50px
+
+  .responsive-img
+    width: 675px
+    max-width: 675px
+
+ul.home-list
+  margin: 42px 0 0 0
+  text-align: left
+  list-style-type: none
+  padding: 0
+
+  li
+    display: block
+    color: $blue
+    text-transform: uppercase
+    font-family: "OpenSansSemiBold", sans-serif
+    font-size: em(17px)
+    line-height: 1.8
+
+.mw-wrapper
+  text-align: center
+  padding: 30px 0
+
+.s-adv
+  padding: 55px 0 10px
+
+.s-adv-item
+  font-size: em(15px)
+  font-family: "OpenSansLight", sans-serif
+  color: #c0cdda
+  line-height: em(21px)
+  margin-bottom: 40px
+
+  h3
+    margin: 0
+    font-size: em(20px)
+    font-family: "Exo2Bold", sans-serif
+    color: #dde9f3
+
+    span
+      font-size: em(18px)
+      color: $accent
+
+  p
+    margin: 12px 0 0
+
+.gallery-tizer-wrap
+  position: relative
+  min-height: 360px
+  border: 7px solid $accent
+  background-size: cover
+  display: block
+
+  &:hover
+    text-decoration: none
+
+    &::before
+      background-color: rgba($blue, 0.8)
+
+  &::before
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba($blue, 0.6)
+
+    +mt(0.5s)
+
+  .table
+    position: relative
+    z-index: 2
+    text-align: center
+    height: 360px
+
+    span
+      font-size: em(26px)
+      color: #fff
+      font-family: "OpenSansLight", sans-serif
+
+      .fa
+        color: #b5bdc6
+        font-size: 58px
+
+.tizer-triangle
+  position: absolute
+  top: 0
+  right: 0
+  color: #fff
+  font-size: 19px
+
+  +triangle(65px, $accent, up-right)
+
+  i
+    position: absolute
+    top: -60px
+    right: 6px
+
+.s-profile
+  .fa
+    color: #b1b8be
+
+  .button
+    margin-top: 36px
+    width: 100%
+
+  h2
+    text-align: left
+
+  p
+    color: #777
+
+.home-gallery-wrap > a,
+.sert-wrap > a
+  display: none
+
+  &:first-child
+    display: block
+
+.item-vertical
+  margin-top: 80px
+  text-align: center
+
+  +mt(0.5s)
+
+  path
+    fill: #555 !important
+
+  &:hover
+    path
+      fill: $accent !important
+
+    h3
+      &::before
+        background-color: $accent
+        width: 30%
+        margin-left: -15%
+
+    .button
+      background-color: $accent
+      box-shadow: 0 4px 0 darken($accent, 6%)
+      color: #fff
+
+      &:active, &:focus
+        background-color: darken($accent, 6%)
+        box-shadow: 0 4px 0 darken($accent, 6%)
+
+  .img-svg
+    width: 74px
+    height: auto
+
+  h3
+    margin-top: 30px
+    position: relative
+    padding-bottom: 15px
+
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      height: 1px
+      width: 15%
+      left: 50%
+      margin-left: -7.5%
+      background-color: #d0d0d0
+
+      +mt(0.5s)
+
+  p
+    font-size: em(14px)
+    color: #666
+    padding: 0 15px
+    margin: 25px 0 35px
+
+.s-works
+  padding-bottom: 0
+  border-bottom: 20px solid #35414e
+
+  h2
+    margin-bottom: 64px
+
+.portfolio
+  .col-md-3
+    padding: 0
+
+  &-item
+    position: relative
+    display: block
+    overflow: hidden
+
+    img
+      +mt(0.5s)
+
+    &:hover
+      .portfolio-item-cont
+        opacity: 1
+        transform: scale(0.95)
+
+      img
+        transform: scale(1.1)
+
+    &-cont
+      position: absolute
+      color: $blue
+      padding-top: 20%
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(255, 255, 255, 0.85)
+      text-align: center
+      opacity: 0
+
+      +mt(0.5s)
+
+      transform: scale(1.1)
+
+      .fa
+        color: rgba($blue, 0.6)
+        font-size: 24px
+
+.portfolio-popup
+  position: relative
+  background-color: #fff
+  display: block
+  max-width: 1000px
+  margin: 5% auto
+  text-align: center
+  padding-top: 15px
+
+  +mt(0.25s)
+
+  .row, .col-sm-12
+    display: block
+
+  h2
+    line-height: em(21px)
+    margin: 30px auto
+    width: 70%
+
+  &-text
+    text-align: left
+    display: block
+    width: 90%
+    margin: 20px auto 40px
+
+  .td
+    vertical-align: top
+    padding: 0 7px
+    color: #666
+
+    &.wsnw
+      color: $accent
+
+    .fa
+      font-size: 22px
+      margin-right: 3px
+
+.carousel-wrap
+  box-shadow: 0 0 0 5px #d7d7d7 inset
+  text-align: center
+  background-color: #f8f8f8
+  padding-bottom: 30px
+  margin-bottom: 25px
+
+  +mt(0.25s)
+
+  &:hover
+    box-shadow: 0 0 0 5px $accent inset
+    background-color: #ebebeb
+
+    .car-img-wrap
+      .img-svg
+        path
+          fill: $accent !important
+          opacity: 1
+
+    .button
+      background-color: $accent
+      box-shadow: 0 4px 0 darken($accent, 6%)
+      color: #fff
+
+      &:active, &:focus
+        background-color: darken($accent, 6%)
+        box-shadow: 0 4px 0 darken($accent, 6%)
+
+  .car-img-wrap
+    position: relative
+
+    .img-svg
+      position: absolute
+      max-height: 50px
+      left: 0
+      top: 25px
+
+      path
+        opacity: .9
+
+        +mt(0.25s)
+
+        fill: #fff !important
+
+  .carousel-text
+    padding: 0 20px
+
+    h3
+      font-size: em(17px)
+      font-family: "OpenSansBold", sans-serif
+
+    p
+      margin-bottom: 20px
+      font-size: em(13px)
+      color: #444
+
+  .button
+    margin-top: 20px
+
+.carousel-eq
+  .carousel-wrap
+    margin: 20px
+
+  .owl-dots
+    text-align: center
+    margin-top: 25px
+
+    .owl-dot
+      width: 14px
+      height: 14px
+      background-color: #d7d7d7
+      border-radius: 10em
+      display: inline-block
+      margin: 3px
+
+      &.active
+        background-color: $accent
+
+.item-vertical-2
+  text-align: center
+  margin-top: 55px
+
+  &:hover
+    .rounded-img-wrap
+      transform: scale(1.15)
+      border: 6px solid $accent
+
+    .iv-phone
+      color: $accent
+
+  h3
+    font-family: "OpenSansBold", sans-serif
+    font-size: em(17px)
+    color: #444
+    margin-top: 40px
+    margin-bottom: 10px
+
+  p
+    font-size: em(13px)
+    color: #666
+    letter-spacing: 2px
+    margin-top: 0
+
+.iv-phone
+  color: #999
+  margin-top: 22px
+  font-family: "Exo2Bold", sans-serif
+  font-size: em(17px)
+
+  +mt(0.5s)
+
+  .fa
+    font-size: 19px
+    margin-right: 3px
+
+.rounded-img-wrap
+  border-radius: 10em
+  border: 6px solid #d7d7d7
+  overflow: hidden
+  width: 125px
+  height: 125px
+  text-align: center
+  margin: auto
+
+  +mt(0.5s)
+
+.s-brands
+  padding: 60px 0
+
+  h2
+    margin-bottom: 65px
+
+.carousel-brands
+  padding: 0 80px
+  position: relative
+
+  .carousel-brand
+    +mt(0.5s)
+
+    opacity: .5
+
+    &:hover
+      opacity: .9
+
+    a
+      display: block
+      text-align: center
+
+      .responsive-img
+        max-width: 70%
+        max-height: 40px
+        display: inline-block
+
+  .owl-nav
+    position: absolute
+    width: 100%
+    top: 0
+
+    > div
+      position: absolute
+      font-size: 34px
+      line-height: 38px
+      color: #9c9c9c
+
+      +mt(0.25s)
+
+      &:hover
+        color: $accent
+
+      &.owl-prev
+        left: -25px
+
+      &.owl-next
+        right: 25px
+
+.s-testimonials
+  h2
+    margin-bottom: 60px
+
+.testimonials-item
+  text-align: center
+  font-size: em(14px)
+  margin-top: 20px
+
+  &:hover
+    .testimonials-descr
+      border-color: $accent
+
+    .rounded-img-wrap
+      border-color: $accent
+
+    .testimonials-head
+      h4
+        color: $accent
+
+  .rounded-img-wrap
+    width: 98px
+    height: 98px
+    border: 5px solid #fff
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px
+
+  .testimonials-head
+    h4
+      font-size: em(16px)
+      font-family: "OpenSansBold", sans-serif
+      margin-top: 35px
+      margin-bottom: 12px
+
+      +mt(0.5s)
+
+    p
+      font-size: em(15px)
+      letter-spacing: 2px
+      margin-top: 0
+      color: #666
+
+  .testimonials-descr
+    position: relative
+    background-color: $blue
+    color: #fff
+    padding: 30px
+    margin-top: 50px
+    border-radius: 2px
+    border-bottom: 5px solid $blue
+
+    +mt(0.5s)
+
+    &::before
+      content: ''
+      top: -16px
+      position: absolute
+      transform: translateX(-16px)
+
+      +triangle(32px, $blue, up)
+
+    h4
+      font-size: em(19px)
+      text-transform: none
+      margin-top: 0
+      margin-bottom: 16px
+
+    p
+      color: #b5babf
+
+.s-contacts-wrap
+  margin-top: 40px
+
+  .map
+    margin: 30px 0 20px
+
+.contacts-text
+  font-size: em(18px)
+  font-family: "OpenSansLight", sans-serif
+
+  p
+    margin:
+      top: 0
+      bottom: 8px
+
+  .fa
+    color: $accent
+    margin-right: 5px
+    font-size: 24px
+    width: 15px
+    text-align: center
+
+.main-foot
+  background-color: darken($blue, 10%)
+
+  .mnu-line
+    padding: 40px 0
+
+    .main-mnu
+      > ul
+        > li
+          &.active, &:hover, &:focus
+            a
+              color: #d7dde2
+
+  .phone
+    .phone-wrap
+      color: #acb6de
+
+//╨Я╨╛╨┐╨░╨┐-╤Д╨╛╤А╨╝╨░ ╨╛╨▒╤А╨░╤В╨╜╨╛╨╣ ╤Б╨▓╤П╨╖╨╕ (╨║╨░╤Б╤В╨╛╨╝╨╕╨╖╨░╤Ж╨╕╤П ╤Д╨╛╤А╨╝╤Л, ╨║╨╛╤В╨╛╤А╨░╤П ╨▓╨╜╨╕╨╖╤Г)
+.form-callback
+  position: relative
+  overflow: hidden
+
+  +mt(0.3s)
+
+  max-width: 320px
+  margin: auto
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px
+
+  .mfp-close
+    color: #fff
+    opacity: .3
+
+    +mt(0.25s)
+
+    &:hover
+      opacity: .6
+
+  .contact-form-head
+    h4
+      color: #fff
+
+.success
+  color: #ffffff
+  background-color: $blue
+  position: absolute
+  z-index: 1
+  left: 0
+  top: -100%
+  width: 100%
+  height: 100%
+  display: flex
+  opacity: 0
+
+  +mt(0.5s)
+
+  p
+    margin: auto
+
+  &:active
+    top: 0
+    opacity: 1
+
+.top
+  position: fixed
+  bottom: 38px
+  right: -120px
+  width: 50px
+  height: 50px
+  border-radius: 10em
+  cursor: pointer
+  background-color: #fff
+  opacity: .4
+  color: $blue
+  z-index: 5
+
+  +mt(0.5s)
+
+  .fa
+    display: block
+    font-size: 32px
+    text-align: center
+    margin-top: 8px
+
+  &:hover
+    opacity: 1
+    background-color: $accent
+
+  &.active
+    right: 10px
+
+// ╨Т╤Б╨╡╨│╨┤╨░ ╨▓ ╨║╨╛╨╜╤Ж╨╡
+@import media
