@@ -4,70 +4,37 @@
 @import vars
 @import settings
 
-nav
-  ul
-    list-style-type: none
-    padding: 0
-    margin: 0
-
-    li
-      display: inline-block
-
 .mnu-line
   padding-top: 28px
 
 .logo
   display: block
-  width: 180px
+  width: 250px
 
   img
     width: 100%
 
-.s-wide
-  padding: 80px 0
-  h2
-    text-align: center
-    margin-top: 0
-    line-height: em(19px)
-
-.main-mnu
-  margin-top: 25px
-  margin-left: 5px
-  text-align: center
-  font-size: em(16px)
-  > ul
-    > li
-      > a
-        display: block
-        padding: 10px 18px
-        color: $color
-        &:hover
-          color: $blue
-          +mt(0.5s)
-      &.active
-        a
-          color: $blue
-          text-decoration: underline
+.main-head
+  min-height: 100vh
+  overflow: hidden
 
 .phone
   text-align: right
   line-height: 1.4
-  margin-top: 25px
   &-wrap
-    color: $color
+    color: $green
     font-family: "Exo2Bold", sans-serif
-    font-size: em(20px)
-    line-height: em(15px)
+    font-size: em(23px)
+    line-height: em(17px)
     .fa
-      font-size: em(18px)
+      font-size: em(21px)
       position: relative
       top: 1px
       margin-right: 5px
-
   .callback
     color: #7e91a4
     display: inline-block
-    font-size: em(13px)
+    font-size: em(15px)
     line-height: em(22px)
     border-bottom: 1px dashed #7e91a4
     +mt(0.5s)
@@ -75,10 +42,103 @@ nav
       text-decoration: none
       border-color: transparent
 
+.header-content
+  padding: 10% 0 5%
+  .button
+    margin-top: 30px
+  .responsive-img
+    width: 675px
+    max-width: 675px
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+    li
+      display: inline-block
 
+.header-text
+  padding-top: 80px
 
+ul.home-list
+  margin: 42px 0 0 0
+  text-align: left
+  list-style-type: none
+  padding: 0
+  li
+    display: block
+    color: $blue
+    text-transform: uppercase
+    font-family: "OpenSansSemiBold", sans-serif
+    font-size: em(17px)
+    line-height: 1.8
 
+.s-adv
+  position: relative
+  min-height: 400px
+  background: transparent
+  background-size: cover
+  padding-bottom: 15px
+  &::before
+    position: absolute
+    display: block
+    content: ''
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .6)
+    z-index: -1
+  &-item
+    text-align: center
+    padding-bottom: 30px
+    p
+      font-size: em(15px)
+      opacity: .8
 
+.offer
+  .col-lg-3
+    padding: 0
+  &-item
+    position: relative
+    overflow: hidden
+    display: block
+    img
+      +mt(.5s)
+    &:hover
+      .offer-item-content
+        opacity: 1
+        transform: scale(.95)
+      img
+        transform: scale(1.1)
+    &-content
+      position: absolute
+      color: darken($color, 5%)
+      padding-top: 25%
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0
+      background-color: rgba(255, 255, 255, .65)
+      text-align: center
+      +mt(.5s)
+      transform: scale(1.1)
+      .fa
+        color: rgba($color, .6)
+        font-size: 40px
+        padding: 20px
+      h3
+        margin-bottom: 30px
+
+.offer-popup
+  position: relative
+  background-color: #fff
+  max-width: 800px
+  margin: 5% auto
+  text-align: center
+  padding-top: 15px
+  display: block
+  +mt(.25s)
 
 
 //Always end

@@ -42,10 +42,7 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: em(41px)
   line-height: 1.2
-
-.ishome
-  h1
-    margin-top: 0
+  margin-top: 0
 
 h2
   font-size: em(32px)
@@ -53,16 +50,17 @@ h2
 h3, h4
   font-family: "OpenSansSemiBold", sans-serif
   text-transform: uppercase
-  font-size: em(15px)
+
+h3
+  font-size: em(18px)
 
 h4
-  font-size: em(13px)
+  font-size: em(14px)
 
 a
   text-decoration: none
   color: $accent
   outline: none !important
-
   &:hover
     text-decoration: underline
 
@@ -73,25 +71,20 @@ b, strong
 .button
   display: inline-block
   border: none
-  background-color: $accent
+  background-color: $green
   text-align: center
   color: #fff
   font-size: em(14px)
   letter-spacing: 2px
   text-transform: uppercase
   padding: 13px 34px
-  border-radius: 3px
-  box-shadow: 0 4px 0 #0e9c4b
-
+  border-radius: 5px
   +mt(0.15s)
-
   &:hover, &:focus
     color: #fff
     text-decoration: none
-
   &:hover
     background-color: #18cb65
-
   &:active
     background-color: #0e9c4b
     transform: translateY(2px)
@@ -102,10 +95,8 @@ b, strong
   box-shadow: 0 4px 0 darken($accent, 6%)
   color: $accent
   font-family: "OpenSansSemiBold", sans-serif
-
   &:hover
     background-color: $accent
-
   &:active, &:focus
     background-color: darken($accent, 6%)
 
@@ -114,11 +105,9 @@ b, strong
   font-size: em(13px)
   background-color: $accent
   box-shadow: 0 4px 0 darken($accent, 6%)
-
   &:hover
     background-color: lighten($accent, 8%)
     box-shadow: 0 4px 0 darken($accent, 3%)
-
   &:active, &:focus
     background-color: darken($accent, 6%)
     box-shadow: 0 4px 0 darken($accent, 6%)
@@ -137,85 +126,20 @@ b, strong
 .hidden
   display: none
 
+.s-wide
+  padding: 80px 0
+  h2
+    text-align: center
+    margin:
+      top: 0
+      bottom: 80px
+    line-height: em(19px)
+
 .s-gray
   background-color: #f8f8f8
 
-//Toggle mnu
-.toggle-mnu
-  position: absolute
-  top: 40px
-  right: 30px
-  display: block
-  width: 28px
-  height: 28px
-  margin-top: 14px
-
-  span
-    &:after, &:before
-      content: ""
-      position: absolute
-      left: 0
-      top: 9px
-
-    &:after
-      top: 18px
-      width: 100%
-      height: 2px
-      background-color: $blue
-      transition: all 0.3s
-      backface-visibility: hidden
-      border-radius: 2px
-
-    position: relative
-    display: block
-    width: 100%
-    height: 2px
-    background-color: $blue
-    transition: all 0.3s
-    backface-visibility: hidden
-    border-radius: 2px
-
-    &:before
-      width: 100%
-      height: 2px
-      background-color: $blue
-      transition: all 0.3s
-      backface-visibility: hidden
-      border-radius: 2px
-
-  &.on span
-    background-color: transparent
-
-    &:before
-      transform: rotate(45deg) translate(-1px, 0px)
-
-    &:after
-      transform: rotate(-45deg) translate(6px, -7px)
-
-.hidden-mnu
-  background-color: $blue
-  display: none
-  position: relative
-  top: 20px
-
-  ul
-    padding: 20px 0
-
-    li
-      display: block
-
-      &.active
-        a
-          text-decoration: underline
-          color: $accent
-
-      a
-        &:hover, &:focus
-          color: #fff
-          background-color: $accent
-          text-decoration: none
-
 .s-dark
+  background-color: $blue
   color: #fff
 
 //Magnific Popup Customize
@@ -257,7 +181,6 @@ b, strong
 
 .mfp-zoom-out-cur
   cursor: auto
-
   .mfp-image-holder .mfp-close
     cursor: pointer
 
@@ -272,10 +195,8 @@ b, strong
 @keyframes rotateplane
   0%
     transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-
   50%
     transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-
   100%
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 
@@ -287,24 +208,19 @@ b, strong
   .form-callback
     opacity: 0
     transform: scale(0.8)
-
   &.mfp-ready .portfolio-popup,
   &.mfp-ready .form-callback
     opacity: 1
     transform: scale(1)
-
   &.mfp-removing .portfolio-popup,
   &.mfp-removing .form-callback
     transform: scale(0.8)
     opacity: 0
-
   &.mfp-bg
     opacity: 0
     transition: opacity 0.3s ease-out
-
   &.mfp-ready.mfp-bg
     opacity: 0.8
-
   &.mfp-removing.mfp-bg
     opacity: 0
 
@@ -322,14 +238,12 @@ form
   label
     margin-bottom: 14px
     display: block
-
     span
       display: block
       font-size: em(14px)
       color: #fff
       opacity: .3
       margin-bottom: 3px
-
     input, select
       background-color: rgba(255, 255, 255, 0.6)
       border-radius: 2px
@@ -340,17 +254,13 @@ form
       color: #222
       font-size: em(15px)
       border-bottom: 4px solid transparent
-
       +mt(0.5s)
-
       &:focus
         background-color: rgba(255, 255, 255, 0.8)
         border-bottom: 4px solid lighten($blue, 10%)
-
     select
       option
         padding: 8px 15px
-
         &:hover
           background-color: $blue
           color: #fff
