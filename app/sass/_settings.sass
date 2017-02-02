@@ -2,28 +2,32 @@
 @import vars
 
 *::-webkit-input-placeholder
-  color: #222
+  color: #999
   opacity: 1
 
 *:-moz-placeholder
-  color: #222
+  color: #999
   opacity: 1
 
 *::-moz-placeholder
-  color: #222
+  color: #999
   opacity: 1
 
 *:-ms-input-placeholder
-  color: #222
+  color: #999
   opacity: 1
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-  color: #222
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder
+  color: transparent !important
 
-body input:required:valid,
-body textarea:required:valid
-  color: #222
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder
+  color: transparent !important
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder
+  color: transparent !important
 
 body
   font-size: 16px
@@ -45,17 +49,17 @@ h1
   margin-top: 0
 
 h2
-  font-size: em(32px)
+  font-size: em(38px)
 
 h3, h4
   font-family: "OpenSansSemiBold", sans-serif
   text-transform: uppercase
 
 h3
-  font-size: em(18px)
+  font-size: em(20px)
 
 h4
-  font-size: em(14px)
+  font-size: em(16px)
 
 a
   text-decoration: none
@@ -115,7 +119,6 @@ b, strong
 .button-gray
   background-color: #e8e8e8
   color: #666
-  box-shadow: 0 4px 0 darken(#e8e8e8, 6%)
 
 .text-center
   text-align: center
@@ -140,6 +143,10 @@ b, strong
 
 .s-dark
   background-color: $blue
+  color: #fff
+
+.s-green
+  background-color: $green
   color: #fff
 
 //Magnific Popup Customize
@@ -204,15 +211,15 @@ b, strong
 
 //Fade-zoom animation for first dialog
 .my-mfp-zoom-in
-  .portfolio-popup,
+  .offer-popup,
   .form-callback
     opacity: 0
     transform: scale(0.8)
-  &.mfp-ready .portfolio-popup,
+  &.mfp-ready .offer-popup,
   &.mfp-ready .form-callback
     opacity: 1
     transform: scale(1)
-  &.mfp-removing .portfolio-popup,
+  &.mfp-removing .offer-popup,
   &.mfp-removing .form-callback
     transform: scale(0.8)
     opacity: 0
@@ -235,6 +242,11 @@ b, strong
     margin-bottom: 60px
 
 form
+  border: 1px solid lighten($green, 20%)
+  border-radius: 10px
+  padding: 25px
+  h4
+    text-transform: none
   label
     margin-bottom: 14px
     display: block
@@ -242,25 +254,28 @@ form
       display: block
       font-size: em(14px)
       color: #fff
-      opacity: .3
+      opacity: .8
       margin-bottom: 3px
-    input, select
+    input
       background-color: rgba(255, 255, 255, 0.6)
       border-radius: 2px
       border: none
       padding: 9px 15px 7px
       display: block
       width: 100%
+      outline: none
       color: #222
       font-size: em(15px)
-      border-bottom: 4px solid transparent
       +mt(0.5s)
       &:focus
         background-color: rgba(255, 255, 255, 0.8)
-        border-bottom: 4px solid lighten($blue, 10%)
-    select
-      option
-        padding: 8px 15px
-        &:hover
-          background-color: $blue
-          color: #fff
+    textarea
+      width: 100%
+      background-color: rgba(255, 255, 255, 0.6)
+      border-radius: 2px
+      border: none
+      outline: none
+      padding: 9px 15px 7px
+      &:focus
+        background-color: rgba(255, 255, 255, 0.8)
+        color: $color

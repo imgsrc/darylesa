@@ -1,5 +1,7 @@
 $(function () {
 
+    $("html").niceScroll();
+
     //E-mail Ajax Send
     $('form').submit(function () { //Change
         var th = $(this);
@@ -20,6 +22,21 @@ $(function () {
     });
 
     $('.s-adv').parallax();
+    $('.s-adv-text').height('auto').equalHeight();
+
+    //Magnific Popup
+    var callBack = $('a[href="#callback"]');
+    callBack.magnificPopup({
+        mainClass: 'my-mfp-zoom-in',
+        removalDelay: 300,
+        type: 'inline'
+    });
+    callBack.on('click', function () {
+        var dataForm = $(this).data('form');
+        var dataText = $(this).data('text');
+        $('.form-callback h4').text(dataText);
+        $('.form-callback [name=admin-data]').val(dataForm);
+    });
 
     var offerItem = $('.offer-item');
     offerItem.each(function (e) {

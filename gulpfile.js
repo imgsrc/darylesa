@@ -19,10 +19,12 @@ var gulp = require('gulp'),
 gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/jquery.nicescroll/jquery.nicescroll.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/owl.carousel/dist/owl.carousel.min.js',
         'app/libs/parallax.js/parallax.min.js',
         'app/libs/wow/dist/wow.min.js',
+        'app/libs/equalheight/dist/jquery.equalheight.js',
         'app/js/common.js' // Всегда в конце
     ])
         .pipe(concat('scripts.min.js'))
@@ -70,7 +72,8 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function () {
 
     var buildFiles = gulp.src([
         'app/*.html',
-        'app/.htaccess'
+        'app/.htaccess',
+        'app/mail.php'
     ]).pipe(gulp.dest('dist'));
 
     var buildCss = gulp.src([
