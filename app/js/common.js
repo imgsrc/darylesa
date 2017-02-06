@@ -53,4 +53,11 @@ $(function () {
 
     $('.s-adv-item').equalHeight();
 
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        items: 1,
+        itemClass: "owl-item"
+    });
+
 });

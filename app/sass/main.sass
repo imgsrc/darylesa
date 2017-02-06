@@ -8,7 +8,8 @@
   padding: 14px 0
   background-color: rgba(0, 0, 0, .8)
   color: #fff
-  vertical-align: middle
+  *
+    vertical-align: middle
   font-size: em(14px)
   .top-cont
     i
@@ -48,6 +49,8 @@
 
 .header-text
   padding-top: 0
+  h1
+    margin-bottom: 15px
 
 .home-list
   margin: 20px 0 0 0
@@ -86,45 +89,53 @@
       font-size: em(15px)
       opacity: .8
 
-.offer
-  .col-lg-3
-    padding: 0
-  &-item
-    position: relative
-    overflow: hidden
-    display: block
-    img
-      +mt(.5s)
-    &:hover
-      .offer-item-content
-        opacity: 1
-        transform: scale(.95)
+.s-offers
+  .offer
+    .col-lg-4
+      padding: 0
+    &-item
+      position: relative
+      overflow: hidden
+      display: block
       img
+        +mt(.5s)
+      &:hover
+        .offer-item-content
+          opacity: 1
+          transform: scale(.95)
+        img
+          transform: scale(1.1)
+      &-content
+        position: absolute
+        color: darken($color, 5%)
+        padding-top: 25%
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        background-color: rgba(255, 255, 255, .65)
+        text-align: center
+        +mt(.5s)
         transform: scale(1.1)
-    &-content
-      position: absolute
-      color: darken($color, 5%)
-      padding-top: 25%
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      opacity: 0
-      background-color: rgba(255, 255, 255, .65)
-      text-align: center
-      +mt(.5s)
-      transform: scale(1.1)
-      .fa
-        color: rgba($color, .6)
-        font-size: 40px
-        padding: 20px
-      h3
-        margin-bottom: 30px
+        .fa
+          color: rgba($color, .6)
+          font-size: 40px
+          padding: 20px
+  .text-center
+    margin-top: 60px
+    margin-bottom: 0
+    h3
+      text-transform: none
+      font-size: em(22px)
+      a
+        color: $accent
+
 
 .offer-popup
   position: relative
   background-color: #fff
-  max-width: 600px
+  max-width: 900px
   margin: auto
   text-align: center
   padding: 35px 0
