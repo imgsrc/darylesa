@@ -51,5 +51,6 @@ $(function () {
         type: 'inline'
     });
 
+    $('.s-adv-item').equalHeight();
 
 });
